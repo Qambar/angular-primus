@@ -25,15 +25,16 @@
     "node": ">=0.8.0"
   },
   "dependencies": {
-    "primus-emitter": "*"
+    "primus-emitter": "~1.x.x",
+    "primus-multiplex": "~1.x.x"
   },
   "devDependencies": {
     "expect.js": "*",
     "karma-ng-scenario": "~0.1",
     "jshint": "*",
-    "express": "*",
-    "primus": "*",
-    "socket.io": "~0.9.16"
+    "express": "~3.x.x",
+    "primus": "~1.x.x",
+    "socket.io": "~0.9.x"
   },
   "peerDependencies": {
     "primus": "*",
