@@ -5,6 +5,7 @@ var
   Primus = require('primus'),
   express = require('express'),
   app = express(),
+  port = 27699,
   http = require('http'),
   server = http.createServer(app),
   primus = new Primus(server, { transformer: 'socket.io', parser: 'JSON' });
@@ -20,7 +21,6 @@ app.get('/', function(req, res){
   res.render('index.html');
 });
 
-
-server.listen(process.env.PORT || 27699, function(){
-  console.log('Listening on http://localhost:' + (process.env.PORT || 27699) + '/');
+server.listen(port, function(){
+  console.log('Listening on http://localhost:' + port + '/');
 });

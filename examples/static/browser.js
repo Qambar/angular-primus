@@ -3,14 +3,11 @@
 
   var App = angular.module('DemoApp', ['angularPrimus']);
 
-  /* this is bad practice, but it's only reuse the same $primus instance */
-  App.run(['$rootScope', '$primus', function($rootScope, $primus){
-    $rootScope.$primus = $primus;
-  }]);
-
-  var Main = App.controller('Main', ['$scope', function($scope){
+  var Main = App.controller('Main', ['$scope', '$primus', function($scope, $primus){
+    $scope.$primus = $primus($scope);
     $scope.history = [];
-    $scope.$primus.$watch('history');
+
+    $scope.$primus.watch();
   }]);
 
   Main.directive('main', [function(){
@@ -30,7 +27,7 @@
     return {
       restrict: 'A',
       link: function($scope){
-        console.log($scope);
+
       }
     };
   }]);
