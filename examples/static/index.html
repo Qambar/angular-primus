@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<!-- angular needs to be added before primus -->
+	<script type="text/javascript" src="/angular/angular.js"></script>
+	<!-- add primus (that automatically includes our angular module angularPrimus -->
+	<script type="text/javascript" src="/primus/primus.js"></script>
+	<!-- add our client side app code -->
+	<script type="text/javascript" src="/browser.js"></script>
+	<!-- some styling -->
+	<link href="/normalize-css/normalize.css" rel="stylesheet" type="text/css">
+	<link href="/bower-foundation-css/foundation.min.css" rel="stylesheet" type="text/css">
+</head>
+<body ng-app="DemoApp">
+	<div class="row">
+		<div class="small-12 small-centered columns">
+			<div ng-controller="Main" class="main small-8 columns">
+				<div main></div>
+			</div>
+			<div ng-controller="Side" class="side small-4 columns">
+				<div side></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
