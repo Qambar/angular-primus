@@ -4,7 +4,7 @@
   var App = angular.module('DemoApp', ['angularPrimus']);
 
   var Main = App.controller('Main', ['$scope', '$primus', '$timeout', function($scope, $primus, $timeout){
-    $scope.$primus = $primus($scope);
+    $scope.$primus = $primus('Main', $scope);
     $scope.history = [];
 
     $scope.$primus.model(['history']); // the scope variable must exist before
