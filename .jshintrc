@@ -6,10 +6,13 @@
     "noarg":true,
     "noempty":true,
     "nonew":true,
+    "newcap":false,
     "undef":true,
     "unused":true,
     "devel":true,
     "node":true,
     "quotmark":true,
-    "globals":["angular","Primus"]
+    "browser": true,
+    "sub": true,
+    "globals":["angular"]
 }
